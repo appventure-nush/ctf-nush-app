@@ -32,7 +32,7 @@
 						Your username on the site
 					</small>
 				</div>
-				<input class="form-control" id="email" name="email" required="" type="hidden" value="test@test.com">
+				<input class="form-control" id="email" name="email" required="" type="hidden" value="{{range(1, 51000) | random}}test@test.com">
 				<div class="form-group">
 					<b>{{ form.password.label }}</b>
 					{{ form.password(class="form-control", value=password) }}
