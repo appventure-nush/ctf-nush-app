@@ -229,7 +229,7 @@ class ChallengeList(Resource):
         chal_q = (
             chal_q.filter_by(**query_args)
             .filter(*filters)
-            .order_by(Challenges.category, Challenges.value, Challenges.id)
+            .order_by(Challenges.category.asc(), Challenges.value, Challenges.id)
         )
 
         # Iterate through the list of challenges, adding to the object which
