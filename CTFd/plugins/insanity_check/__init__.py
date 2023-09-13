@@ -33,7 +33,8 @@ class InsaneChallenge(BaseChallenge):
 
     challenge_model = Challenges
 
-CHALLENGE_CLASSES["insane"] = InsaneChallenge
+
 
 def load(app):
+    CHALLENGE_CLASSES["insane"] = InsaneChallenge
     register_plugin_assets_directory(app, base_path='/plugins/insanity_check/assets/')
